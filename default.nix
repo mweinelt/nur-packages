@@ -13,5 +13,9 @@
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
+
+  hassLovelaceModules = pkgs.recurseIntoAttrs {
+    mini-graph-card = (pkgs.callPackage ./pkgs/home-assistant/lovelaceModules/mini-graph-card {});
+  };
 }
 
