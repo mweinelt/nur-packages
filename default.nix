@@ -21,6 +21,7 @@
   };
 
   hassThemes = pkgs.recurseIntoAttrs {
+    clear = (pkgs.callPackage ./pkgs/home-assistant/themes/clear {});
     clear-dark = (pkgs.callPackage ./pkgs/home-assistant/themes/clear-dark {});
   };
 }
