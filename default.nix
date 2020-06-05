@@ -26,5 +26,6 @@
   };
 
   trinitycore_335 = (pkgs.callPackage ./pkgs/servers/games/trinitycore { });
+  trinitycore_825 = (pkgs.callPackage ./pkgs/servers/games/trinitycore/825.nix { });
 }
 
