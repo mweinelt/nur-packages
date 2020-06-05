@@ -24,5 +24,7 @@
     clear = (pkgs.callPackage ./pkgs/home-assistant/themes/clear {});
     clear-dark = (pkgs.callPackage ./pkgs/home-assistant/themes/clear-dark {});
   };
+
+  trinitycore_335 = (pkgs.callPackage ./pkgs/servers/games/trinitycore { });
 }
 
