@@ -1,8 +1,8 @@
-{ clangStdenv, fetchFromGitHub, cmake, libmysqlclient, git, boost, readline, bzip2 }:
+{ llvmPackages_11, lib, fetchFromGitHub, cmake, libmysqlclient, git, boost, readline, bzip2 }:
 
-clangStdenv.mkDerivation rec {
+llvmPackages_11.stdenv.mkDerivation rec {
   pname = "TrinityCore";
-  version = "TDB335.20081";
+  version = "TDB335.20101";
 
   src = fetchFromGitHub {
     owner = pname;
@@ -14,7 +14,7 @@ clangStdenv.mkDerivation rec {
   nativeBuildInputs = [ cmake git ];
   buildInputs = [ libmysqlclient boost readline bzip2 ];
 
-  meta = with clangStdenv.lib; {
+  meta = with lib; {
     description = "TrinityCore Open Source MMO Framework";
     homepage = "https://www.trinitycore.org";
     license = licenses.gpl2;
