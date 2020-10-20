@@ -6,7 +6,7 @@ on:
     # rebuild everyday at 2:51
     # TIP: Choose a random time here so not all repositories are build at once:
     # https://www.random.org/clock-times/?num=1&earliest=01%3A00&latest=08%3A00&interval=5&format=html&rnd=new
-    - cron:  '51 2 * * *'
+    - cron:  '17 37 * * *'
 jobs:
   tests:
     strategy:
@@ -35,9 +35,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2.3.2
+      uses: actions/checkout@v2.3.3
     - name: Install nix
-      uses: cachix/install-nix-action@v10
+      uses: cachix/install-nix-action@v11
       with:
         nix_path: "${{ matrix.nixPath }}"
     - name: Show nixpkgs version
