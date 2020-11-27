@@ -2,13 +2,13 @@
 
 llvmPackages_11.stdenv.mkDerivation rec {
   pname = "TrinityCore";
-  version = "TDB335.20101";
+  version = "TDB335.20111";
 
   src = fetchFromGitHub {
     owner = pname;
     repo = pname;
     rev = version;
-    sha256 = "16121ghywhrnsr8vdpa6vp77r2iw9hh9p79vp5ixsgi6x9yadfx2";
+    sha256 = "1i8gs2samas9d57xk9gslcxm2aadzqkk4s3aiyzd6q9b0w0spg1b";
   };
 
   nativeBuildInputs = [ cmake git ];
