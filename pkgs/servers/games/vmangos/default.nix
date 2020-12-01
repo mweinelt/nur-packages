@@ -1,5 +1,5 @@
 { lib
-, stdenv
+, llvmPackages_11
 , fetchFromGitHub
 , cmake
 , ace
@@ -9,15 +9,15 @@
 , tbb
 }:
 
-stdenv.mkDerivation rec {
+llvmPackages_11.stdenv.mkDerivation rec {
   pname = "vmangos";
   version = "unstable-2020-11-30";
 
   src = fetchFromGitHub {
     owner = "vmangos";
     repo = "core";
-    rev = "fdd11c710552a3c64e0acf7aba25bddd11fed64c";
-    sha256 = "0jqrs0gkimfv03lrmhkfp7vkwqrbc6zbas5lmd6204mpwfh3cqfp";
+    rev = "bd974eb24f4899f73b6a7e63a74ba057f649bd79";
+    sha256 = "124dvalsw7iy13042dfjmjzcrwkg18z5q95h9hp9njf0d0l3khgd";
   };
 
   nativeBuildInputs = [ cmake git ];
