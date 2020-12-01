@@ -30,6 +30,8 @@
 
   oscam = pkgs.callPackage ./pkgs/servers/tv/oscam { };
 
+  cmangos_tbc = (pkgs.callPackage ./pkgs/servers/games/cmangos/tbc.nix { });
+
   trinitycore_335 = (pkgs.callPackage ./pkgs/servers/games/trinitycore/335.nix { });
   trinitycore_434 = (pkgs.callPackage ./pkgs/servers/games/trinitycore/434.nix { });
   trinitycore_837 = (pkgs.callPackage ./pkgs/servers/games/trinitycore/837.nix { });
