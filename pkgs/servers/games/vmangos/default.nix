@@ -35,6 +35,6 @@ llvmPackages_11.stdenv.mkDerivation rec {
   meta = with lib; {
     description = "Progressive Vanilla Core aimed at all versions from 1.2 to 1.12";
     homepage = "https://github.com/vmangos/core";
-    licenses = license.gpl2;
+    license = licenses.gpl2;
   };
 }

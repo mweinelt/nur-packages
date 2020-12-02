@@ -36,6 +36,6 @@ llvmPackages_11.stdenv.mkDerivation rec {
   meta = with lib; {
     description = "Continued Massive Network Game Object Server";
     homepage = "https://cmangos.net";
-    licenses = license.gpl2;
+    license = licenses.gpl2;
   };
 }
