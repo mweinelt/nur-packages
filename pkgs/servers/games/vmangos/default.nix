@@ -37,6 +37,11 @@ llvmPackages_11.stdenv.mkDerivation rec {
     "-DUSE_EXTRACTORS=1"
   ];
 
+  postInstall = ''
+    cp -Rv ../sql $out/sql
+  '';
+
+
   meta = with lib; {
     description = "Progressive Vanilla Core aimed at all versions from 1.2 to 1.12";
     homepage = "https://github.com/vmangos/core";
