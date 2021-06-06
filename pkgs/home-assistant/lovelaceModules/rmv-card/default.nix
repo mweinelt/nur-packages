@@ -22,6 +22,6 @@ stdenv.mkDerivation rec {
   meta = with lib; {
     homepage = "https://github.com/cgtobi/rmv-card";
     description = "Custom card for the RMV component";
-    license = licenses.mit;  # assume MIT since the api bindings are MIT as well; https://github.com/cgtobi/rmv-card/issues/1
+    license = licenses.asl20;
   };
 }
